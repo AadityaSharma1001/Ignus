@@ -10,9 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #f3f9fb, #dce7ee); /* Subtle gradient */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  padding: 0 5%; /* Spacing from edges */
+  background: linear-gradient(to right, #f3f9fb, #dce7ee); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 0 5%; 
 }
 
 .navbar-logo {
