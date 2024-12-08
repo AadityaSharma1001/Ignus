@@ -1,27 +1,178 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-.home-content{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+.foreground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
 }
 
-.home-ignus-logo{
-    width: 100%;
+#foreground-svg-1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 300%; /* Scale the image */
+}
+
+#foreground-svg-2 {
+  position: fixed;
+  bottom: 5px; /* Adjust spacing */
+  left: 0;
+  width: 300%; /* Scale the image */
+}
+
+#foreground-svg-3 {
+  position: fixed;
+  bottom: 10px; /* Adjust spacing */
+  left: 0;
+  width: 300%; /* Scale the image */
+}
+
+#foreground-svg-4 {
+  position: fixed;
+  bottom: 15px; /* Adjust spacing */
+  left: 0;
+  width: 300%; /* Scale the image */
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  opacity: 1; /* 30% transparency */
+  z-index: -1; /* Push video behind other elements */
+}
+
+/* Hero Text */
+.hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 1; /* Ensure it is above the video */
+}
+
+/* Center the SVG */
+.hero-svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%; /* Adjust width based on responsiveness */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.scroll-door-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-door {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #8b4513; /* Rich brown color */
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 10;
+}
+
+.left-door {
+  left: 0;
+  transform-origin: left center;
+}
+
+.right-door {
+  right: 0;
+  transform-origin: right center;
+}
+
+.about-section.scroll-door-open .left-door {
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.about-section.scroll-door-open .right-door {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+
+.section-content {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width:100%;
+  height: auto;
+  margin: 0;
+}
+
+.about-us-heading {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.about-us-content{
     height:auto;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.home-ignus-logo img{
+.about-us-para{
+    font-size:1.5rem;
+    margin: auto;
+    width: 40%;
+}
+
+.about-us-logo{
     width: 30%;
     height: auto;
+    margin: auto;
 }
+
+.about-us-logo img{
+    width: 100%;
+    height: auto;
+}
+
+.about-section.scroll-door-open .section-content {
+  opacity: 1;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }

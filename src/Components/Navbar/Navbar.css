@@ -13,6 +13,8 @@
   background: linear-gradient(to right, #f3f9fb, #dce7ee); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   padding: 0 5%; 
+  position: fixed;
+  z-index: 1000;
 }
 
 .navbar-logo {
