@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.home-content{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.home-ignus-logo{
+    width: 100%;
+    height:auto;
+}
+
+.home-ignus-logo img{
+    width: 30%;
+    height: auto;
+}
